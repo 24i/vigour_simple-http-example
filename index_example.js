@@ -10,15 +10,14 @@ var config = new Config()
 var ip = config.ip.val
 var port = config.port.val
 
-// --------------------------- setting up server
-
 server.on('request', function (req, res) {
+  console.log('got a request!')
   res.writeHead(200)
   res.end()
 })
 
-server.on('error', function (sError) {
-  console.log('COULD NOT BIND or / Bad REQ', 'ERROR: on adapator or call issue with socket')
+server.on('error', function (err) {
+  console.log('server error!\n', err)
 })
 
 server.listen(port, ip)
