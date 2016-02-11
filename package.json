@@ -1,18 +1,33 @@
 {
-	"name": "simple-http-example",
-	"version": "0.0.1",
-	"author": "aphorise",
-	"description": "HTTP server with passed object and arguments from command line.",
-	"license": "MIT",
-	"main": "index.js",
-	"scripts": { "start": "node index.js" },
-	"keywords": [ "http", "arguments", "parameters", "shell", "bash", "node.js" ],
-	"readmeFilename": "README.md",
-	"repository":
-	{
-		"type": "git",
-		"url": "ssh://git@github.com:vigour-io/simple-http-example.git"
-	},
-	"devDependencies": { },
-	"dependencies": { }
+  "name": "simple-http-example",
+  "version": "0.0.1",
+  "author": "aphorise",
+  "description": "HTTP server with passed object and arguments from command line.",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "http",
+    "arguments",
+    "parameters",
+    "shell",
+    "bash",
+    "node.js"
+  ],
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:vigour-io/simple-http-example.git"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "vigour-config": "~0.0.9"
+  },
+  "vigour": {
+    "port": "63336",
+    "ip": "127.0.0.1",
+    "id": "defaultId"
+  }
 }
