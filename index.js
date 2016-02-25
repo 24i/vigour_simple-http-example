@@ -19,7 +19,7 @@ if (config.parent) {
     if (service !== config) {
       service = service.val
       console.log('found another service! route:', service)
-      clientMaker(80, service)
+      clientMaker(80, service, config.id.val)
     }
   })
 } else if (config.otherguy) {
