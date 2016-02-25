@@ -11,23 +11,23 @@ var Service = require('./lib/service')
 
 var service = new Service(config.serialize())
 
-if (config.parent) {
-  console.log('its a dowhaps deploy!')
-  global.config = config
-  let clientMaker = require('./lib/service/client')
-  setTimeout(function () {
-    config.parent.each(function (service) {
-      if (service !== config) {
-        service = service.val
-        console.log('found another service! route:', service)
-        clientMaker(80, service, config.id.val)
-      }
-    })
-  }, 7000)
+// if (config.parent) {
+//   console.log('its a dowhaps deploy!')
+//   global.config = config
+//   let clientMaker = require('./lib/service/client')
+//   setTimeout(function () {
+//     config.parent.each(function (service) {
+//       if (service !== config) {
+//         service = service.val
+//         console.log('found another service! route:', service)
+//         clientMaker(80, service, config.id.val)
+//       }
+//     })
+//   }, 7000)
   
-} else if (config.otherguy) {
-  require('./dev/tcp-client')
-}
+// } else if (config.otherguy) {
+//   require('./dev/tcp-client')
+// }
 
 // =============== start repl
 
