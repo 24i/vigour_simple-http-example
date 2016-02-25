@@ -17,7 +17,7 @@ if (config.parent) {
   let clientMaker = require('./lib/service/client')
   config.parent.each(function (service) {
     if (service !== config) {
-      service = sibling.val
+      service = service.val
       console.log('found another service! route:', service)
       clientMaker(80, service)
     }
