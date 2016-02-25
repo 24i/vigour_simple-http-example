@@ -13,6 +13,7 @@ var service = new Service(config.serialize())
 
 if (config.parent) {
   console.log('its a dowhaps deploy!')
+  global.config = config
   let clientMaker = require('./lib/service/client')
   config.parent.each(function (service) {
     if (service !== config) {
