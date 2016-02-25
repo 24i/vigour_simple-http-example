@@ -11,6 +11,20 @@ var Service = require('./lib/service')
 
 var service = new Service(config.serialize())
 
+if (config.parent) {
+  console.log('its a dowhaps deploy!')
+  let clientMaker = require('./lib/service/client')
+  config.parent.each(function (service) {
+    if (service !== config) {
+      service = sibling.val
+      console.log('found another service! route:', service)
+      clientMaker(80, service)
+    }
+  })
+} else if (config.otherguy) {
+  require('./dev/tcp-client')
+}
+
 // =============== start repl
 
 var Repl = require('repl')

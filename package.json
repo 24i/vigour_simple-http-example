@@ -28,6 +28,7 @@
   "vigour": {
     "port": "63336",
     "ip": "127.0.0.1",
-    "id": "defaultId"
+    "id": "defaultId",
+    "mode": "http"
   }
 }
